@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Attendance System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Smart Attendance System</h1>
+    </header>
+
+    <div class="container">
+        <h2>Welcome Admin</h2>
+        <p>Manage attendance through facial recognition technology.</p>
+
+        <a href="{{ url_for('upload_files') }}" class="button">📤 Upload Student Images</a>
+        <a href="{{ url_for('run_attendance') }}" class="button">🎥 Start Attendance</a>
+        <a href="{{ url_for('view_history') }}" class="button">📊 View Attendance History</a>
+
+    </div>
+</body>
+</html>

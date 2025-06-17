@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attendance History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Attendance History</h1>
+    </header>
+
+    <div class="container">
+        {% if records %}
+            <table style="width:100%; border-collapse: collapse;">
+                <tr style="background-color: #0047b3; color: white;">
+                    <th style="padding: 10px; text-align: left;">Name</th>
+                    <th style="padding: 10px; text-align: left;">Date</th>
+                    <th style="padding: 10px; text-align: left;">Time</th>
+                </tr>
+                {% for name, date, time in records %}
+                <tr style="border-bottom: 1px solid #ccc;">
+                    <td style="padding: 10px;">{{ name }}</td>
+                    <td style="padding: 10px;">{{ date }}</td>
+                    <td style="padding: 10px;">{{ time }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>No attendance records found.</p>
+        {% endif %}
+
+        <a href="{{ url_for('index') }}" class="link">← Back to Home</a>
+    </div>
+</body>
+</html>
