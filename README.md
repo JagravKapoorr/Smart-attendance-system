@@ -34,21 +34,3 @@ A smart facial recognition-based attendance system built with **Python**, **Open
 | Database         | SQLite3                   |
 | Version Control  | Git, GitHub               |
 
----
-
-## 📁 Project Structure
-Smart-Attendance-System/
-│
-├── app.py # Flask app
-├── face_encoder.py # Face training logic
-├── attendance_system.py # Real-time face recognition
-├── database/attendance.db # SQLite3 DB
-├── known_faces/ # Trained student images
-├── static/styles.css # Styling
-├── templates/ # HTML pages
-│ ├── index.html
-│ ├── upload.html
-│ └── history.html
-├── .gitignore
-└── README.md
-
